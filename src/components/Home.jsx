@@ -13,7 +13,7 @@ const Home = () => {
         <Link to="/login" className="link login-link">Login</Link>
         <br />
         <br />
-        <a href="#" className="link signup-link">Create account</a>
+        <Link to="/signup" className="link signup-link">Create account</Link>
       </div>
     </div>
   );
