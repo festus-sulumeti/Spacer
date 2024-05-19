@@ -9,10 +9,8 @@ const Login = () => {
         <h1 className="heading"> Welcome to Our Platform! </h1>
         <br />
         <p className="description">Unlock exclusive features by signing in.</p>
-        <br />
+       
         <Link to="/login" className="link login-link">User Login</Link>
-        <br />
-        <br />
         <a href="#" className="link signup-link">Admin Login</a>
       </div>
     </div>

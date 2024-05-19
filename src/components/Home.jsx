@@ -11,8 +11,6 @@ const Home = () => {
         <p className="description">Discover and book unique spaces for any activity</p>
         <br />
         <Link to="/login" className="link login-link">Login</Link>
-        <br />
-        <br />
         <Link to="/signup" className="link signup-link">Create account</Link>
       </div>
     </div>
