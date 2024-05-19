@@ -9,7 +9,7 @@ const Home = () => {
         <h1 className="heading">SPACER</h1>
         <br />
         <p className="description">Discover and book unique spaces for any activity</p>
-        <br />
+       
         <Link to="/login" className="link login-link">Login</Link>
         <Link to="/signup" className="link signup-link">Create account</Link>
       </div>

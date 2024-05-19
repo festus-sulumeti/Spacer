@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styling/AccountCreation.css";
+import '../styling/Accountcreation.css';
 
 const AccountCreation = () => {
   const [username, setUsername] = useState("");
@@ -13,9 +13,11 @@ const AccountCreation = () => {
   };
 
   return (
-    <div className="wrapper">
+    <>
+    <div className="wrapper2">
       <div className="container">
         <h2>Sign Up</h2>
+        <br />
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="username">Username</label>
@@ -49,11 +51,11 @@ const AccountCreation = () => {
           </div>
           <button type="submit">Sign Up</button>
         </form>
-        <p>
-          Already have an account? <a href="/login">Log in</a>
-        </p>
+
+         <p>Already have an account? <a href="/login">Log in</a></p>
       </div>
     </div>
+    </>
   );
 };
 
