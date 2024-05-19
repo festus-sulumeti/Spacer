@@ -1,0 +1,59 @@
+/* Generic Styles */
+/* 
+body {
+  background-color: #F1F5F9;
+} */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Generic Styles End */
+
+.wrapper {
+  background-color: white;
+  width: 330px;
+  height: 450px;
+  margin: 100px auto;
+  border-radius: 10px;
+  text-align: center;
+  padding: 40px;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #000; /* Deep black color */
+  font-weight: bold; /* Bold text */
+}
+
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #666;
+  font-weight: bold; /* Bold text to highlight */
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  margin-top: 15px;
+  padding: 12px 16px;
+  border-radius: 5px;
+}
+.login-link {
+  background-color: #000;
+  color: white;
+}
+.signup-link {
+  color: #000;
+  border: solid 1px #000;
+}
