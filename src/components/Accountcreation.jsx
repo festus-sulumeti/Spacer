@@ -4,34 +4,11 @@ import "react-toastify/dist/ReactToastify.css";
 import '../styling/Accountcreation.css';
 
 const AccountCreation = () => {
-  // const [username, setUsername] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  
-  // const [setUsers] = useState([]);
- 
-
   const [newUser, setNewUser] = useState({
     username: "",
     email: "",
     password: ""
   });
-
-  // useEffect(() => {
-    
-  //   fetchUsers();
-    
-  // }, []);
-
-  // const fetchUsers = async () => {
-  //   try {
-  //     const response = await fetch("http://127.0.0.1:5000/users");
-  //     const data = await response.json();
-  //     setUsers(data.users);
-  //   } catch (error) {
-  //     toast.error("Error fetching users");
-  //   }
-  // };
 
   const handleAddUser = async (e) => {
     e.preventDefault();
