@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../styling/Adminhomepage.css";
@@ -113,7 +113,7 @@ const Adminhomepage = () => {
       const data = await response.json();
       if (data.success) {
         toast.success(data.message);
-        // Redirect to the login page
+        // Redirect to the login page  <a href="about.html">about us</a>
         window.location.href = "/login"; // Update this with your login page route
       } else {
         toast.error(data.message);
