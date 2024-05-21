@@ -6,6 +6,7 @@ import Userlogin from "./components/Userlogin";
 import Userhomepage from "./components/Userhomepage";
 import Adminlogin from "./components/Adminlogin";
 import Adminhomepage from "./components/Adminhomepage";
+import SpaceDetails from "./components/SpaceDetails";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/adminlogin" element={<Adminlogin />} />
         <Route path="/Userhomepage" element={<Userhomepage />} />
         <Route path="/Adminhomepage" element={<Adminhomepage/>} />
+        <Route path="/space/:id" component={SpaceDetails} />
       </Routes>
     </Router>
   );

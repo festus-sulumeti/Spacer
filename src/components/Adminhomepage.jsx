@@ -106,7 +106,7 @@ const Adminhomepage = () => {
 
       <div className="section">
         <h2>View All Spaces</h2>
-        <div className="spaces-list">
+        <div className="list-container">
           {spaces.map((space) => (
             <div key={space.id} className="space-item">
               <h3>{space.name}</h3>
@@ -157,7 +157,7 @@ const Adminhomepage = () => {
 
       <div className="section">
         <h2>View All Users</h2>
-        <div className="users-list">
+        <div className="list-container">
           {users.map((user) => (
             <div key={user.id} className="user-item">
               <h3>{user.username}</h3>
@@ -195,7 +195,7 @@ const Adminhomepage = () => {
 
       <div className="section">
         <h2>View All Bookings</h2>
-        <div className="bookings-list">
+        <div className="list-container">
           {bookings.map((booking) => (
             <div key={booking.id} className="booking-item">
               <p><strong>User ID:</strong> {booking.user_id}</p>
