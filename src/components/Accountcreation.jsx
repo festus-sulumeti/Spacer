@@ -50,8 +50,22 @@ const AccountCreation = () => {
       } else {
         toast.error(data.message);
       }
+
+      if (response.ok) {
+        
+        
+        toast.success("Successfully signed in", {
+          autoClose: 100,
+          onClose: () => {
+            window.location.href = "Userhomepage";
+          },
+        });
+      } else {
+        toast.error("Invalid email or password");
+      }
+
     } catch (error) {
-      toast.error("Error adding user");
+      toast.error("Error Signing up to the system user");
     }
   };
 
