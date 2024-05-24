@@ -7,6 +7,22 @@
   margin-bottom: 20px; /* Add margin for spacing */
 }
 
+.image-container {
+  display: flex; /* Use flexbox to layout the images */
+  justify-content: space-between; /* Distribute space evenly between the images */
+  align-items: center; /* Align items vertically in the center */
+  margin-top: 20px; /* Add margin space at the top */
+}
+
+.imager,
+.home-image {
+  width: 45%; 
+  max-width: 100%; 
+  border-radius: 10px; 
+}
+
+
+
 .logginout {
   display: flex;
   align-items: center;

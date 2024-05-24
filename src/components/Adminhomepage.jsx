@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../styling/Adminhomepage.css";
+import { FaSignOutAlt  } from "react-icons/fa"; // Import icons
+
 
 const Adminhomepage = () => {
   const [spaces, setSpaces] = useState([]);
@@ -20,7 +22,7 @@ const Adminhomepage = () => {
     password: ""
   });
 
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  
 
   useEffect(() => {
     fetchSpaces();
@@ -113,7 +115,7 @@ const Adminhomepage = () => {
       const data = await response.json();
       if (data.success) {
         toast.success(data.message);
-        // Redirect to the login page  <a href="about.html">about us</a>
+        // Redirect to the login page 
         window.location.href = "/login"; // Update this with your login page route
       } else {
         toast.error(data.message);
@@ -123,41 +125,23 @@ const Adminhomepage = () => {
     }
   };
 
-  // const toggleDropdown = () => {
-  //   setIsDropdownOpen(!isDropdownOpen);
-  // };
+
 
   return (
     <div className="admin-homepage">
-      <h1>Admin Dashboard</h1>
-      <button onClick={handleLogout} className="logout-button">Logout</button>
-      {/* <div className="user-profile">
-        <div className={`user-icon ${isDropdownOpen ? 'active' : ''}`} onClick={toggleDropdown}>
-          <i className="uil uil-user-circle"></i>
-          <i className={`uil uil-angle-down dropdown-icon ${isDropdownOpen ? 'rotate' : ''}`}></i>
-        </div>
-        {isDropdownOpen && (
-          <div className="dropdown-content">
-            <div className="dropdown-option" onClick={() => console.log('View Profile')}>
-              <i className="uil uil-user"></i>
-              <span>View Profile</span>
-            </div>
-            <div className="dropdown-option" onClick={() => console.log('Settings')}>
-              <i className="uil uil-cog"></i>
-              <span>Settings</span>
-            </div>
-            <div className="dropdown-option" onClick={() => console.log('Help')}>
-              <i className="uil uil-question-circle"></i>
-              <span>Help</span>
-            </div>
-            <div className="dropdown-option" onClick={handleLogout}>
-              <i className="uil uil-sign-out-alt"></i>
-              <span>Logout</span>
-            </div>
+        <div>
+        <h1><strong>Admin Dashboard</strong></h1>
+        <div className="logginout">
+          <div className="logout-container">
+              <button onClick={handleLogout} className="logout-button">
+                <FaSignOutAlt className="logout-icon" />
+                Logout
+              </button>
           </div>
-        )}
-      </div> */}
-
+        </div>
+       
+      </div>
+    
       <div className="flex-container">
         <div className="section">
           <h2>View All Users</h2>
