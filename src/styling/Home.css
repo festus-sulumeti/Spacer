@@ -1,8 +1,4 @@
 /* Generic Styles */
-/* 
-body {
-  background-color: #F1F5F9;
-} */
 * {
   padding: 0;
   margin: 0;
@@ -13,23 +9,16 @@ body {
 
 .wrapper {
   background-color: white;
-  width: 330px;
-  height: 450px;
+  width: 430px;
+  height: auto; /* Adjust height automatically */
   margin: 100px auto;
   border-radius: 10px;
   text-align: center;
-  padding: 40px;
+  padding: 10px; /* Reduced padding to make space for the image */
 }
-/* .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} */
 
 .container {
   max-width: 400px;
-  height: 100%;
   margin: 50px auto;
   padding: 20px;
   background-color: #fff;
@@ -37,6 +26,11 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.office-image {
+  width: 100%;
+  border-radius: 5px; /* Add some rounded corners to match the container */
+  margin-bottom: 20px; /* Space between image and heading */
+}
 
 .heading {
   font-size: 1.5rem;
@@ -44,7 +38,6 @@ body {
   color: #000; /* Deep black color */
   font-weight: bold; /* Bold text */
 }
-
 
 .description {
   font-size: 1rem;
@@ -59,11 +52,16 @@ body {
   margin-top: 15px;
   padding: 12px 16px;
   border-radius: 5px;
+  width: 80%; /* Width adjustment for better fit */
+  margin-left: auto; /* Center align */
+  margin-right: auto; /* Center align */
 }
+
 .login-link {
   background-color: #000;
   color: white;
 }
+
 .signup-link {
   color: #000;
   border: solid 1px #000;
