@@ -1,32 +1,43 @@
-/* Userhomepage.css */
+/* Userhome.css */
+
+.user-homepage-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.user-homepage-container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 auto;
+}
 
 .header {
   display: flex;
-  justify-content: space-between; /* Align items horizontally with space between them */
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px; /* Add margin for spacing */
+  margin-bottom: 20px;
 }
 
 .image-container {
-  display: flex; /* Use flexbox to layout the images */
-  justify-content: space-between; /* Distribute space evenly between the images */
-  align-items: center; /* Align items vertically in the center */
-  margin-top: 20px; /* Add margin space at the top */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .imager,
 .home-image {
-  width: 45%; 
-  max-width: 100%; 
-  border-radius: 10px; 
-}
-
-
-
-.logginout {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; 
+  width: 45%;
+  max-width: 100%;
+  border-radius: 10px;
 }
 
 .logout-container {
@@ -35,315 +46,91 @@
 }
 
 .logout-button {
-  padding: 10px 20px;
-  background-color: transparent;
-  color: #000;
+  background-color: #ff4d4d;
+  color: #fff;
   border: none;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
 
-.logout-icon {
-  margin-right: 5px;
-}
-
-
-.user-homepage-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .space-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .space-item {
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .space-image {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .space-details {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .space-details h2 {
-    margin-bottom: 10px;
-  }
-  
-  .space-info {
-    display: flex;
-    align-items: center;
-  }
-  
-  .info-item {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-  }
-  
-  .info-icon {
-    margin-right: 5px;
-  }
-  
-  .booking-form {
-    margin-top: 20px;
-  }
-  
-  .booking-form label {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .booking-form input[type="datetime-local"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .booking-form button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .section {
-    margin-top: 40px;
-  }
-  
-  .list-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  
-  .booking-item {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .form-icon {
-    margin-right: 5px;
-  }
-  
-
-  /* Userhomepage.css */
-
-.user-homepage-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+.logout-button .logout-icon {
+  margin-right: 10px;
 }
 
 .space-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between; /* Adjust spacing between items */
 }
 
 .space-item {
-  width: calc(33.33% - 20px); /* Adjust item width */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.space-image {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  width: calc(50% - 10px);
+  box-sizing: border-box;
 }
 
 .space-details {
-  display: flex;
-  flex-direction: column;
-}
-
-.space-details h2 {
   margin-bottom: 10px;
 }
 
 .space-info {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
 }
 
 .info-item {
   display: flex;
   align-items: center;
-  margin-right: 10px;
 }
 
 .info-icon {
   margin-right: 5px;
 }
 
-.booking-form {
-  margin-top: 20px;
-}
-
-.booking-form label {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.booking-form input[type="datetime-local"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.booking-form button {
-  padding: 10px 20px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .section {
   margin-top: 40px;
 }
 
-.list-container {
+.booking-form {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.booking-form label {
+  grid-column: span 2;
+}
+
+.booking-form input,
+.booking-form button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.booking-form button {
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .booking-item {
-  border: 1px solid #ccc;
-  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
   border-radius: 10px;
+  padding: 20px;
 }
-
-.form-icon {
-  margin-right: 5px;
-}
-
-
-/* Userhomepage.css */
-
-.user-homepage-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .space-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between; /* Adjust spacing between items */
-  }
-  
-  .space-item {
-    width: calc(33.33% - 20px); /* Adjust item width */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .space-image {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .space-details {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .space-details h2 {
-    margin-bottom: 10px;
-  }
-  
-  .space-info {
-    display: flex;
-    align-items: center;
-  }
-  
-  .info-item {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-  }
-  
-  .info-icon {
-    margin-right: 5px;
-  }
-  
-  .booking-form {
-    margin-top: 20px;
-  }
-  
-  .booking-form label {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .booking-form input[type="datetime-local"],
-  .booking-form input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc; /* Add border */
-    border-radius: 5px; /* Add border radius for a nicer appearance */
-    background-color: #f9f9f9; /* Change background color */
-  }
-  
-  .booking-form button {
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .section {
-    margin-top: 40px;
-  }
-  
-  .list-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  
-  .booking-item {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .form-icon {
-    margin-right: 5px;
-  }
-  

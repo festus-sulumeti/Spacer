@@ -1,14 +1,12 @@
-import { useState  } from "react";
+import { useState } from "react";
 import '../styling/Accountcreation.css';
 import { ToastContainer, toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 
-
 const Userlogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
 
   const handleSignIn = async (e) => {
     e.preventDefault();
@@ -23,8 +21,6 @@ const Userlogin = () => {
       });
 
       if (response.ok) {
-        
-        
         toast.success("Successfully signed in", {
           autoClose: 100,
           onClose: () => {
@@ -43,9 +39,26 @@ const Userlogin = () => {
   console.log("Userlogin component rendered");
 
   return (
-    <div className="wrapper2">
+    <div className="wrapper">
       <div className="container">
         <h2>Sign In</h2>
+        <br />
+        <div className="containerr">
+          <div className="content">
+            <div className="content__container">
+              <p className="content__container__text">
+                Hello
+              </p>
+            
+              <ul className="content__container__list">
+                <li className="content__container__list__item">welcome</li>
+                <li className="content__container__list__item">sign in !</li>
+                <li className="content__container__list__item">user !</li>
+                <li className="content__container__list__item">spacer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <br />
         <form onSubmit={handleSignIn}>
           <div className="form-group">
@@ -73,8 +86,8 @@ const Userlogin = () => {
             />
           </div>
           <button type="submit">Sign In</button>
-          
         </form>
+        <br />
         <p>Don't have an account? <Link to="/signup">Signup</Link></p>
         <ToastContainer />
       </div>

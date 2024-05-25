@@ -48,9 +48,26 @@ const AccountCreation = () => {
 
   return (
     <>
-    <div className="wrapper2">
+    <div className="wrapper">
       <div className="container">
         <h2>Sign Up</h2>
+        <br />
+        <div className="containerr">
+          <div className="content">
+            <div className="content__container">
+              <p className="content__container__text">
+                Hello
+              </p>
+            
+              <ul className="content__container__list">
+                <li className="content__container__list__item">welcome</li>
+                <li className="content__container__list__item">sign up </li>
+                <li className="content__container__list__item">user !</li>
+                <li className="content__container__list__item">spacer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <br />
         <form onSubmit={handleAddUser}>
           <div className="form-group">
@@ -86,7 +103,9 @@ const AccountCreation = () => {
           <button type="submit">Sign Up</button>
         </form>
 
-         <p>Already have an account? <a href="/login">Log in</a></p>
+        <br />
+
+        <p>Already have an account? <a href="/login">Log in</a></p>
       </div>
 
       <ToastContainer />

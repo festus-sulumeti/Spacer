@@ -1,0 +1,36 @@
+.button-container {
+    display: flex;
+    background-color: rgb(27, 133, 219);
+    width: 100%; /* Adjusted to take full width */
+    max-width: 1200px; /* Maximum width for the container */
+    height: 60px; /* Increased height for better visibility */
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+      rgba(27, 133, 219, 0.5) 5px 10px 15px;
+    margin: 20px auto; /* Centering the container with auto margins */
+}
+
+.button {
+    outline: 0 !important;
+    border: 0 !important;
+    width: 50px; /* Increased button size */
+    height: 50px; /* Increased button size */
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.icon {
+    font-size: 24px; /* Increased icon size for better visibility */
+}
