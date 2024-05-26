@@ -193,3 +193,38 @@ p a:hover {
  
 
 
+/**
+Account creation media quaries
+*/
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    margin: 50px auto;
+  }
+
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .container h2 {
+    font-size: 20px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}

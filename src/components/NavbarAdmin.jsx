@@ -1,12 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import "../styling/Navbar.css";
-import { toast } from "react-toastify";
 
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
-  
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -32,13 +31,13 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/userlogout", {
+      const response = await fetch("http://127.0.0.1:5000/adminlogout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         }
       });
-
+     
       if (response.ok) {
         toast.success("Successfully signed out", {
           autoClose: 100,
@@ -53,39 +52,14 @@ const Navbar = () => {
       toast.error("Error during logout");
     }
   };
-   
-  const handleDeleteAccount = async () => {
-    try {
-      const token = localStorage.getItem('token'); // Retrieve token from localStorage
-  
-      const response = await fetch("http://127.0.0.1:5000/delete_user", {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}` // Pass the token in the request headers
-        }
-      });
-  
-      if (response.ok) {
-        toast.success("Account deleted successfully", {
-          autoClose: 100,
-          onClose: () => {
-            localStorage.removeItem('token'); // Remove token from localStorage
-            history.push('/signup'); // Redirect to signup page
-          },
-        });
-      } else {
-        const result = await response.json();
-        toast.error(result.message || "Failed to delete account");
-      }
-    } catch (error) {
-      toast.error("Error during account deletion");
-    }
-  };
 
   const handleOpenBookingPage = () => {
-    window.location.href = "/booking";
+    window.location.href = "/adminbooking";
   };
+
+ 
+   
+
 
   return (
     <div className="button-container">
@@ -125,7 +99,7 @@ const Navbar = () => {
           ></path>
         </svg>
       </button>
-
+      
       <button className="button" onClick={handleOpenBookingPage}>
         <svg
           className="icon"
@@ -166,8 +140,8 @@ const Navbar = () => {
         </button>
         {isDropdownOpen && (
           <div className="dropdown-menu">
-            {/* <button onClick={handleDeleteAccount} className="dropdown-item"><i className="uil uil-user-times"> </i>Delete Account</button> */}
-            <button onClick={handleLogout} className="dropdown-item"><i className="uil uil-signout"></i> Logout</button>
+
+            <button onClick={handleLogout}  className="dropdown-item"><i className="uil uil-signout"></i> Logout</button>
           </div>
         )}
       </div>

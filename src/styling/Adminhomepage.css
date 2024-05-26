@@ -1,3 +1,12 @@
+.admin-homepage-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
 .admin-homepage {
   padding: 20px;
   background-color: #f0f2f5;
@@ -139,6 +148,69 @@ form button:hover {
 
 .dropdown-icon.rotate {
   transform: rotate(180deg);
+}
+
+
+.admin-homepage-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.admin-homepage {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-container {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.user-item,
+.space-item,
+.booking-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.logout-container {
+  text-align: right;
+}
+
+.logout-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+.logout-icon {
+  margin-right: 5px;
 }
 
 

@@ -1,0 +1,51 @@
+/* Bookings.css */
+
+.payment-container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto; /* Center horizontally */
+  margin-top: 50vh; /* Move below the center */
+  transform: translateY(-50%); /* Adjust to center vertically */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.payment-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.payment-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.payment-form label {
+  font-weight: bold;
+}
+
+.payment-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.payment-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.payment-form button:hover {
+  background-color: #0056b3;
+}

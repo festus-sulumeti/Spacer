@@ -3,7 +3,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../styling/Userhome.css";
-import { FaMapMarkerAlt, FaDollarSign, FaCalendarAlt, FaSignOutAlt } from "react-icons/fa";
+import { FaMapMarkerAlt, FaDollarSign, FaCalendarAlt } from "react-icons/fa";
 import home from '../images/home.jpeg';
 import office from '../images/office.jpeg';
 import spacebook from "../images/spacebook.jpeg";
@@ -48,42 +48,24 @@ const Userhomepage = () => {
   };
 
   const handleBooking = async () => {
+    const bookingData = {
+      space_id: selectedSpaceId,
+      start_time: startTime,
+      end_time: endTime,
+      user_id: userId,
+      status: status,
+      payment_status: paymentStatus,
+    };
+
+    console.log("Booking data:", bookingData); // Log the booking data
+
     try {
-      const response = await axios.post(
-        "http://localhost:5000/bookings",
-        {
-          space_id: selectedSpaceId,
-          start_time: startTime,
-          end_time: endTime,
-          user_id: userId,
-          status: status,
-          payment_status: paymentStatus,
-        }
-      );
+      const response = await axios.post("http://localhost:5000/bookings", bookingData);
       toast.success(response.data.message);
       fetchBookings();
     } catch (error) {
+      console.error("Error booking space:", error.response); // Log the error response
       toast.error("Failed to book space");
-    }
-  };
-
-  const handleLogout = async () => {
-    try {
-      const response = await fetch("http://127.0.0.1:5000/userlogout", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        }
-      });
-      const data = await response.json();
-      if (data.success) {
-        toast.success(data.message);
-        window.location.href = "/login";
-      } else {
-        toast.error(data.message);
-      }
-    } catch (error) {
-      toast.error("Error during logout");
     }
   };
 
@@ -93,12 +75,6 @@ const Userhomepage = () => {
       <div className="user-homepage-container">
         <div className="header">
           <h1><strong>Home Space</strong></h1>
-          <div className="logout-container">
-            <button onClick={handleLogout} className="logout-button">
-              <FaSignOutAlt className="logout-icon" />
-              Logout
-            </button>
-          </div>
         </div>
         <p><strong>Welcome to Spacer, a place where you can make a booking appointment for a meeting you have.</strong></p>
         <div className="image-container">
@@ -149,9 +125,9 @@ const Userhomepage = () => {
             <label htmlFor="space_id">Space ID:</label>
             <input type="text" id="space_id" value={selectedSpaceId} onChange={(e) => setSelectedSpaceId(e.target.value)} />
             <label htmlFor="start_time"><FaCalendarAlt className="form-icon" />Start Time:</label>
-            <input type="datetime-local" id="start_time" onChange={(e) => setStartTime(e.target.value)} />
+            <input type="datetime-local" id="start_time" value={startTime} onChange={(e) => setStartTime(e.target.value)} />
             <label htmlFor="end_time"><FaCalendarAlt className="form-icon" />End Time:</label>
-            <input type="datetime-local" id="end_time" onChange={(e) => setEndTime(e.target.value)} />
+            <input type="datetime-local" id="end_time" value={endTime} onChange={(e) => setEndTime(e.target.value)} />
             <label htmlFor="status">Status:</label>
             <input type="text" id="status" value={status} onChange={(e) => setStatus(e.target.value)} />
             <label htmlFor="payment_status">Payment Status:</label>

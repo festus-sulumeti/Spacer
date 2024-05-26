@@ -7,6 +7,8 @@ import Userhomepage from "./components/Userhomepage";
 import Adminlogin from "./components/Adminlogin";
 import Adminhomepage from "./components/Adminhomepage";
 import SpaceDetails from "./components/SpaceDetails";
+import Bookings from "./components/Bookings";
+import Adminbooking from "./components/Adminbooking";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/adminlogin" element={<Adminlogin />} />
         <Route path="/Userhomepage" element={<Userhomepage />} />
         <Route path="/Adminhomepage" element={<Adminhomepage/>} />
+        <Route path="/booking" element={<Bookings />} />
+        <Route path="/adminbooking" element={<Adminbooking />} />
         <Route path="/space/:id" component={SpaceDetails} />
       </Routes>
     </Router>
