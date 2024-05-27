@@ -15,7 +15,7 @@ const SpaceDetails = () => {
 
   const fetchSpaceDetails = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/spaces/${id}`);
+      const response = await axios.get(`https://madespacer-1.onrender.com/spaces/${id}`);
       setSpace(response.data);
       setLoading(false);
     } catch (error) {

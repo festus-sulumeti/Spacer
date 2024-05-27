@@ -32,7 +32,7 @@ const Adminhomepage = () => {
 
   const fetchSpaces = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/spaces");
+      const response = await fetch("https://madespacer-1.onrender.com/spaces");
       const data = await response.json();
       setSpaces(data.spaces);
     } catch (error) {
@@ -42,7 +42,7 @@ const Adminhomepage = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/users");
+      const response = await fetch("https://madespacer-1.onrender.com/users");
       const data = await response.json();
       setUsers(data.users);
     } catch (error) {
@@ -52,7 +52,7 @@ const Adminhomepage = () => {
 
   const fetchBookings = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/bookings");
+      const response = await fetch("https://madespacer-1.onrender.com/bookings");
       const data = await response.json();
       setBookings(data.bookings);
     } catch (error) {
@@ -63,7 +63,7 @@ const Adminhomepage = () => {
   const handleAddSpace = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://127.0.0.1:5000/spaces", {
+      const response = await fetch("https://madespacer-1.onrender.com/spaces", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -85,7 +85,7 @@ const Adminhomepage = () => {
   const handleAddUser = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://127.0.0.1:5000/users", {
+      const response = await fetch("https://madespacer-1.onrender.com/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

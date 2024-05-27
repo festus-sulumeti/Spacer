@@ -31,7 +31,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/adminlogout", {
+      const response = await fetch("https://madespacer-1.onrender.com/adminlogout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

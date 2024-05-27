@@ -32,7 +32,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/userlogout", {
+      const response = await fetch("https://madespacer-1.onrender.com/userlogout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -58,7 +58,7 @@ const Navbar = () => {
     try {
       const token = localStorage.getItem('token'); // Retrieve token from localStorage
   
-      const response = await fetch("http://127.0.0.1:5000/delete_user", {
+      const response = await fetch("https://madespacer-1.onrender.com/delete_user", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

@@ -16,7 +16,7 @@ const Bookings = () => {
     setShowLoader(true);
     try {
       const response = await axios.post(
-        "http://localhost:5000/make_payment",
+        "https://madespacer-1.onrender.com/make_payment",
         {
           phone_number: phone,
           amount: amount,
