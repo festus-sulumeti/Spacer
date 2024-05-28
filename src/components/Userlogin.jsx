@@ -88,7 +88,7 @@ const Userlogin = () => {
           <button type="submit">Sign In</button>
         </form>
         <br />
-        <p>Don't have an account? <Link to="/signup">Signup</Link></p>
+        <p>No a account? <Link to="/signup">Signup</Link></p>
         <ToastContainer />
       </div>
     </div>
