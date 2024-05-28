@@ -58,7 +58,7 @@ const Userhomepage = () => {
     };
 
     try {
-      const response = await axios.post("hthttps://madespacer-2.onrender.com/addbookings", bookingData);
+      const response = await axios.post("https://madespacer-2.onrender.com/addbookings", bookingData);
       toast.success(response.data.message);
       fetchBookings();
     } catch (error) {
