@@ -1,12 +1,13 @@
 import { useState } from "react";
 import '../styling/Accountcreation.css';
 import { ToastContainer, toast } from "react-toastify";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 
 const Userlogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSignIn = async (e) => {
     e.preventDefault();
@@ -24,7 +25,7 @@ const Userlogin = () => {
         toast.success("Successfully signed in", {
           autoClose: 100,
           onClose: () => {
-            window.location.href = "Userhomepage";
+          navigate ( "/Userhomepage" );
           },
         });
       } else {
