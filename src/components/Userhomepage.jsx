@@ -29,7 +29,7 @@ const Userhomepage = () => {
 
   const fetchSpaces = async () => {
     try {
-      const response = await axios.get("https://madespacer-2.onrender.com//getspaces");
+      const response = await axios.get("https://madespacer-2.onrender.com/getspaces");
       setSpaces(response.data.spaces);
     } catch (error) {
       toast.error("Failed to fetch spaces");
