@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 import "../styling/Navbar.css";
 import { toast } from "react-toastify";
-
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
-  
+  const navigate = useNavigate();
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -43,7 +43,7 @@ const Navbar = () => {
         toast.success("Successfully signed out", {
           autoClose: 100,
           onClose: () => {
-            window.location.href = "/login";
+            navigate ("/login");
           },
         });
       } else {
@@ -54,35 +54,7 @@ const Navbar = () => {
     }
   };
    
-  const handleDeleteAccount = async () => {
-    try {
-      const token = localStorage.getItem('token'); // Retrieve token from localStorage
-  
-      const response = await fetch("https://madespacer-2.onrender.com/delete_user", {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}` // Pass the token in the request headers
-        }
-      });
-  
-      if (response.ok) {
-        toast.success("Account deleted successfully", {
-          autoClose: 100,
-          onClose: () => {
-            localStorage.removeItem('token'); // Remove token from localStorage
-            history.push('/signup'); // Redirect to signup page
-          },
-        });
-      } else {
-        const result = await response.json();
-        toast.error(result.message || "Failed to delete account");
-      }
-    } catch (error) {
-      toast.error("Error during account deletion");
-    }
-  };
-
+ 
   const handleOpenBookingPage = () => {
     window.location.href = "/booking";
   };

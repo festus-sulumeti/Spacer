@@ -2,8 +2,11 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import '../styling/Accountcreation.css';
+import { useNavigate } from "react-router-dom";
 
 const AccountCreation = () => {
+  const navigate = useNavigate();
+
   const [newUser, setNewUser] = useState({
     username: "",
     email: "",
@@ -34,7 +37,7 @@ const AccountCreation = () => {
         toast.success("Successfully signed in", {
           autoClose: 100,
           onClose: () => {
-            window.location.href = "Userhomepage";
+            navigate ("/Userhomepage");
           },
         });
       } else {

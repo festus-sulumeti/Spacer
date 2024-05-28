@@ -1,8 +1,9 @@
-import axios from "axios";
+
 import { useState } from "react";
-import { toast } from "react-toastify";
+
 import "../styling/Bookings.css";
 import "../styling/Cat.css"
+import { useNavigate } from "react-router-dom";
 
 const Bookings = () => {
   const [phone, setPhone] = useState("");
@@ -10,7 +11,8 @@ const Bookings = () => {
   const [callbackUrl, setCallbackUrl] = useState("");
   const [accountRef, setAccountRef] = useState("");
   const [description, setDescription] = useState("");
-  const [showLoader, setShowLoader] = useState(false);
+
+  const navigate = useNavigate();
 
   // const handlePayment = async () => {
   //   setShowLoader(true);
@@ -34,7 +36,7 @@ const Bookings = () => {
   // };
 
   const handleBackClick = () => {
-    window.location.href = "/Userhomepage";
+    navigate ("/Userhomepage");
   };
 
   return (
