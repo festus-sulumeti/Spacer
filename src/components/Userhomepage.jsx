@@ -29,7 +29,7 @@ const Userhomepage = () => {
 
   const fetchSpaces = async () => {
     try {
-      const response = await axios.get("https://madespacer-1.onrender.com/getspaces");
+      const response = await axios.get("https://madespacer-2.onrender.com//getspaces");
       setSpaces(response.data.spaces);
     } catch (error) {
       toast.error("Failed to fetch spaces");
@@ -40,7 +40,7 @@ const Userhomepage = () => {
 
   const fetchBookings = async () => {
     try {
-      const response = await axios.get("https://madespacer-1.onrender.com/getbookings");
+      const response = await axios.get("https://madespacer-2.onrender.com/getbookings");
       setBookings(response.data.bookings);
     } catch (error) {
       toast.error("Failed to fetch bookings");
@@ -58,7 +58,7 @@ const Userhomepage = () => {
     };
 
     try {
-      const response = await axios.post("https://madespacer-1.onrender.com/addbookings", bookingData);
+      const response = await axios.post("hthttps://madespacer-2.onrender.com/addbookings", bookingData);
       toast.success(response.data.message);
       fetchBookings();
     } catch (error) {
