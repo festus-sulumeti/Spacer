@@ -15,8 +15,12 @@ const SpaceDetails = () => {
 
   const fetchSpaceDetails = async () => {
     try {
-      const response = await axios.get(`https://madespacer-1.onrender.com/spaces/${id}`);
-      setSpace(response.data);
+      const response = await axios.get(`https://madespacer-2.onrender.com/getspaces/${id}`);
+      if (response.data.success) {
+        setSpace(response.data.space);
+      } else {
+        toast.error("Failed to fetch space details");
+      }
       setLoading(false);
     } catch (error) {
       toast.error("Failed to fetch space details");
@@ -25,17 +29,22 @@ const SpaceDetails = () => {
   };
 
   const handleBooking = async () => {
+    if (!space) return;
+
     try {
-      // Assuming the user ID and other booking details are hardcoded for this example
       const bookingDetails = {
-        user_id: 1,
+        user_id: 1, // Replace with actual user ID
         space_id: space.id,
         start_time: new Date().toISOString(), // Replace with actual start time
         end_time: new Date(new Date().getTime() + 60 * 60 * 1000).toISOString(), // Replace with actual end time
       };
 
-      await axios.post("http://localhost:5000/bookings", bookingDetails);
-      toast.success("Booking successful!");
+      const response = await axios.post("https://madespacer-2.onrender.com/addbookings", bookingDetails);
+      if (response.data.success) {
+        toast.success("Booking successful!");
+      } else {
+        toast.error("Failed to book space");
+      }
     } catch (error) {
       toast.error("Failed to book space");
     }
@@ -46,13 +55,15 @@ const SpaceDetails = () => {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <div>
-          <h1>{space.name}</h1>
-          <p>{space.description}</p>
-          <p>Location: {space.location}</p>
-          <p>Price per hour: ${space.price_per_hour}</p>
-          <button onClick={handleBooking}>Book Now</button>
-        </div>
+        space && (
+          <div>
+            <h1>{space.name}</h1>
+            <p>{space.description}</p>
+            <p>Location: {space.location}</p>
+            <p>Price per hour: ${space.price_per_hour}</p>
+            <button onClick={handleBooking}>Book Now</button>
+          </div>
+        )
       )}
       <ToastContainer />
     </div>

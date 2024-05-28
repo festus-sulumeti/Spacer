@@ -58,7 +58,7 @@ const Navbar = () => {
     try {
       const token = localStorage.getItem('token'); // Retrieve token from localStorage
   
-      const response = await fetch("https://madespacer-1.onrender.com/delete_user", {
+      const response = await fetch("https://madespacer-2.onrender.com/delete_user", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

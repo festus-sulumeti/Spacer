@@ -13,7 +13,7 @@ const AccountCreation = () => {
   const handleAddUser = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://madespacer-1.onrender.com/users", {
+      const response = await fetch("https://madespacer-2.onrender.com/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

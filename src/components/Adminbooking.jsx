@@ -31,7 +31,7 @@ const Adminbooking = () => {
 
   const fetchBookings = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/bookings");
+      const response = await axios.get("https://madespacer-2.onrender.com/bookings");
       setBookings(response.data.bookings);
     // Check if there are bookings and update hasBookings accordingly
     if (response.data.bookings.length > 0) {
@@ -48,7 +48,7 @@ const Adminbooking = () => {
   const handleBooking = async () => {
     try {
       const response = await axios.post(
-        "https://madespacer-1.onrender.com/bookings",
+        "https://madespacer-2.onrender.com/bookings",
         {
           space_id: selectedSpaceId,
           start_time: startTime,

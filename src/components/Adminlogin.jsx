@@ -13,7 +13,7 @@ const Adminlogin = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://madespacer-1.onrender.com/adminlogin", {
+      const response = await fetch("https://madespacer-2.onrender.com/adminlogin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -39,7 +39,6 @@ const Adminlogin = () => {
     }
   };
 
-  console.log("Userlogin component rendered");
 
   return (
     <div className="wrapper">
